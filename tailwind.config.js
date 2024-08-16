@@ -12,9 +12,16 @@ module.exports = {
             transform: "scaleY(1.5)"
           }
         }
-      }
+      },
+      // tailwindcss will now have access to the animation:wavey class that we created here
+      animation: {
+          wavey: "wavey 1000ms linear infinite"
+      },
     },
   },
-  plugins: [require("./plugins/openVariant")],
+  plugins: [
+    require("./plugins/openVariant"),
+    require("./plugins/animationDelay"),
+  ],
 }
 
