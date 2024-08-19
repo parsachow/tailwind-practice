@@ -40,14 +40,31 @@
             carousel.scrollLeft = carousel.scrollLeft + itemWidth;
         });
 
+        const darkModeToggle = document.getElementById("dark-mode");
+        darkModeToggle.addEventListener("click", () => {
+            if (document.body.classList.contains("dark")) 
+            {
+                document.body.classList.remove("dark");
+            }
+            else {
+                document.body.classList.add("dark")
+            }
+        });
+
     }
   </script>
 
 </head>
-<body>
-    <main>
+<body class="dark">
+    <main class="bg-zinc-200 dark:bg-zinc-900">
         <header class="text-zinc-200">
-            <nav class="sticky flex top-0 bg-gradient-to-l from-rose-400 to-pink-600">
+
+            <button id="dark-mode" class="fixed top-24 right-0 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900 p-2 text-3xl">
+                <i class="fa-solid far fa-sun dark:hidden"></i>
+                <i class="fa-solid far far fa-moon hidden dark:inline"></i>
+            </button>
+
+            <nav class="z-10 sticky flex top-0 bg-gradient-to-l from-rose-400 to-pink-600">
                 <div class="flex items-center p-2 gap-2">
                     <img src="./assets/images/logo-inverted.png" width="50">
                     <div class="font-bold text-2xl">
@@ -108,6 +125,7 @@
                     </div>
                 </div>
             </nav>
+
             <div style="background-image: url('./assets/images/hero.jpg')" class="flex flex-col items-center justify-center h-[calc(100vh-200px)] min-h-[400px] bg-cover bg-center bg-fixed">
                 <div class="bg-white/30 py-2 px-4 rounded-xl text-center backdrop-blur-md">
                     <div class="relative ">
@@ -137,7 +155,7 @@
                 </form>
             </div>
         </header>
-        <div class="max-w-screen-lg mx-auto mt-20">
+        <div class="max-w-screen-lg mx-auto mt-20 text-zinc-900 dark:text-zinc-200">
             <h2>Headliners</h2>
             <p>
                 Experience the sonic delight from these made-up artists across 7 days that music fans are calling "one of the best gigs that will happen this year"
@@ -201,6 +219,24 @@
                     <i class="fas fas fa-angle-right"></i>
                 </div>
             </div>
+            <h2 class="mt-20">Tickets</h2>
+            <table class="w-full mt-5 table border border-zinc-500 border-collapse">
+                <thead class="text-lg  font-bold">
+                    <td class="border border-zinc-500 p-3">Tickets</td>
+                    <td class="border border-zinc-500 p-3">Price</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-zinc-500 py-2 px-3">Single Day Ticket</td>
+                        <td class="border border-zinc-500 py-2 px-3">$30</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-zinc-500 py-2 px-3">7 Day Ticket</td>
+                        <td class="border border-zinc-500 py-2 px-3">$300</td>
+                    </tr>
+                </tbody>
+                <caption>Once they're gone, they're GONE!</caption>
+            </table>
         </div>
     </main>
 </body>
