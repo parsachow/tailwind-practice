@@ -452,6 +452,42 @@ html {
   font-family: "Quicksand", sans-serif;
 }
 
+h1{
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h3{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+h4{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+h5{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+h6{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -625,6 +661,11 @@ html {
   top: 100%;
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
@@ -642,12 +683,24 @@ html {
   margin-top: 0.25rem;
 }
 
+.mt-20{
+  margin-top: 5rem;
+}
+
 .mt-3{
   margin-top: 0.75rem;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
 .mt-\[-70px\]{
   margin-top: -70px;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
 }
 
 .block{
@@ -686,6 +739,10 @@ html {
   height: 1rem;
 }
 
+.h-80{
+  height: 20rem;
+}
+
 .h-\[calc\(100vh-200px\)\]{
   height: calc(100vh - 200px);
 }
@@ -712,6 +769,14 @@ html {
 
 .w-full{
   width: 100%;
+}
+
+.min-w-\[80\%\]{
+  min-width: 80%;
+}
+
+.max-w-screen-lg{
+  max-width: 1024px;
 }
 
 .flex-1{
@@ -758,6 +823,14 @@ html {
   cursor: pointer;
 }
 
+.snap-x{
+  scroll-snap-type: x var(--tw-scroll-snap-strictness);
+}
+
+.snap-center{
+  scroll-snap-align: center;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -780,6 +853,14 @@ html {
 
 .gap-2{
   gap: 0.5rem;
+}
+
+.gap-4{
+  gap: 1rem;
+}
+
+.overflow-x-auto{
+  overflow-x: auto;
 }
 
 .whitespace-nowrap{
@@ -897,6 +978,10 @@ html {
   padding-bottom: 0.5rem;
 }
 
+.pb-5{
+  padding-bottom: 1.25rem;
+}
+
 .pr-4{
   padding-right: 1rem;
 }
@@ -969,6 +1054,17 @@ html {
   opacity: 1;
 }
 
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-black\/20{
+  --tw-shadow-color: rgb(0 0 0 / 0.2);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .outline-pink-500{
   outline-color: #ec4899;
 }
@@ -1020,6 +1116,8 @@ html {
 /* @layer directive coming straight from tailwind and is to target base, component or utilities depending on our requirements*/
 
 /* base style can ONLY target html tags */
+
+/* define default style here */
 
 .hover\:bg-sky-900:hover{
   --tw-bg-opacity: 1;
@@ -1096,4 +1194,9 @@ html {
   .md\:hidden{
     display: none;
   }
+
+  .md\:min-w-\[40\%\]{
+    min-width: 40%;
+  }
 }
+

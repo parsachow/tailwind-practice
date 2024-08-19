@@ -7,10 +7,29 @@
 /* @layer directive coming straight from tailwind and is to target base, component or utilities depending on our requirements*/
 
 /* base style can ONLY target html tags */
+ /* define default style here */
 @layer base {
     html {
         font-family: "Quicksand", sans-serif;
     }
+   h1 {
+    @apply text-6xl font-bold;
+   }
+   h2 {
+    @apply text-5xl font-bold;
+   }
+   h3 {
+    @apply text-4xl font-bold;
+   }
+   h4 {
+    @apply text-3xl font-bold;
+   }
+   h5 {
+    @apply text-2xl font-bold;
+   }
+   h6 {
+    @apply text-xl font-bold;
+   }
 }
 
 @layer components {
@@ -18,3 +37,4 @@
         @apply relative flex h-full items-center p-4 cursor-pointer font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out
     }
 }
+
