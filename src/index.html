@@ -56,7 +56,7 @@
 
 </head>
 <body class="dark">
-    <main class="bg-zinc-200 dark:bg-zinc-900">
+    <main class="bg-zinc-200 pb-20 dark:bg-zinc-900">
         <header class="text-zinc-200">
 
             <!-- toggle light/dark mode -->
@@ -161,7 +161,7 @@
 
         <!-- main section -->
         <div class="max-w-screen-lg mx-auto mt-20 text-zinc-900 dark:text-zinc-200">
-            <h2>Headliners</h2>
+            <h2><span class="text-transparent bg-gradient-to-r from-cyan-500 via-pink-500 to-teal-700 bg-clip-text">Headliners</span></h2>
             <p>
                 Experience the sonic delight from these made-up artists across 7 days that music fans are calling "one of the best gigs that will happen this year"
             </p>
@@ -233,7 +233,8 @@
             <div class="relative rounded-lg mt-5 bg-zinc-800 py-4 px-2 text-zinc-200">
                 <div class="absolute top-0 left-1/2 w-4 ml-[-8px] bg-gradient-to-b from-sky-700 via-cyan-600 to-teal-900 h-full rounded-full ">
                     <div class="sticky top-1/2">
-                        <div class="relative h-4 w-4">
+                        <!-- size utility classname can replace height and width of same dimensions -->
+                        <div class="relative size-4">
                             <div class="absolute h-4 w-4 animate-ping rounded-full bg-pink-500 opacity-75"></div>
                             <div class="bg-rose-500 rounded-full relative h-4 w-4"></div>
                         </div>
@@ -289,9 +290,15 @@
                         <td class="border border-zinc-500 py-2 px-3">$300</td>
                     </tr>
                 </tbody>
-                <caption class="caption-bottom">Once they're gone, they're GONE!</caption>
+                <caption class="mt-2 caption-bottom">Once they're gone, they're GONE!</caption>
             </table>
         </div>
+        <section class="mt-10 py-40 px-10 flex flex-col items-center justify-center bg-gradient-to-br from-cyan-500 to-rose-500 rounded-tlbr-full">
+            <button class="btn-rose-500 btn">
+                Get Tickets
+            </button>
+        </section>
+        
     </main>
 </body>
 </html>
